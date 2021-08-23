@@ -1,0 +1,112 @@
+.body {
+  display: flex;
+  flex-direction: column;
+  height: 100vh; /* vw */
+}
+
+.list-wrap {
+  flex-grow: 1;
+  position: relative;
+}
+
+.list {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.list-scroll-view {
+  display: flex;
+  flex-wrap: wrap;
+  align-content: flex-start;
+  justify-content: space-between;
+  margin-left: 2vw;
+  margin-right: 2vw;
+}
+
+
+.course-card {
+  width: 47vw; /** 47 * 2 = 94 **/
+
+  margin-top: 10px;
+  margin-bottom: 10px;
+  /* margin: 10px; */
+}
+
+.course-card image {
+  width: 100%;
+  border-radius: 5px;
+}
+
+.price, .active {
+  color: #23b8ff;
+}
+/* 底部的样式 */
+.bottom_card {
+  text-align: center;
+  font-size: 25rpx;
+  line-height: 1;
+  padding-left:50rpx;
+  padding-right:50rpx;
+  padding-bottom: 30rpx;
+  padding-top: 20rpx;
+}
+.bottom_card image{
+  width:70rpx;
+}
+.bottom{
+  display: flex;
+  justify-content: space-between;
+
+}
+.bottom_card .text{
+  color:#777777 ;
+}
+
+/* 顶部搜索框的样式 */
+.weui-search-bar {
+  position: relative;
+  padding: 8px 10px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  box-sizing: border-box;
+  background-color: #EFEFF4;
+  border-top: 1rpx solid #D7D6DC;
+  border-bottom: 1rpx solid #D7D6DC;
+}
+.weui-icon-search_in-box {
+  position: absolute;
+  left: 10px;
+  top: 7px;
+}
+.weui-search-bar__form {
+  position: relative;
+  -webkit-box-flex: 1;
+  -webkit-flex: auto;
+          flex: auto;
+  border-radius: 5px;
+  background: #FFFFFF;
+  border: 1rpx solid #E6E6EA;
+}
+.weui-search-bar__box {
+  position: relative;
+  padding-left: 30px;
+  padding-right: 30px;
+  width: 100%;
+  box-sizing: border-box;
+  z-index: 1;
+}
+.weui-search-bar__input {
+  height: 28px;
+  line-height: 28px;
+  font-size: 14px;
+}
+.weui-search-bar__cancel-btn {
+  margin-left: 10px;
+  line-height: 28px;
+  color: #09BB07;
+  white-space: nowrap;
+}
