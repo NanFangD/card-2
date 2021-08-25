@@ -5,6 +5,48 @@ const app = getApp()
 Page({
   data: {
     wording: 'girl',
+    courses:[
+      {name:'人人都会小程序基础',
+        img:'../../img/cover.png',
+        price:'0'
+      },
+      {name:'小程序进阶',
+        img:'../../img/cover.png',
+        price:'119'
+      },
+      {name:'小程序实战',
+        img:'../../img/cover.png',
+        price:'109'
+      },
+      {name:'小程序综合应用',
+        img:'../../img/cover.png',
+        price:'129'
+      },
+      {name:'小程序综合应用',
+        img:'../../img/cover.png',
+        price:'129'
+      },
+      {name:'小程序综合应用',
+        img:'../../img/cover.png',
+        price:'129'
+      },
+      {name:'小程序综合应用',
+        img:'../../img/cover.png',
+        price:'129'
+      },
+      {name:'小程序综合应用',
+        img:'../../img/cover.png',
+        price:'129'
+      },
+      {name:'小程序综合应用',
+        img:'../../img/cover.png',
+        price:'129'
+      },
+      {name:'小程序综合应用',
+        img:'../../img/cover.png',
+        price:'129'
+      }
+    ],
     imgs:[
       '../../img/icon/index.png',
       '../../img/icon/sort.png',

@@ -2,11 +2,11 @@
   <view class="head">
     <view class="weui-search-bar">
       <view class="weui-search-bar__form">
-      <!-- 搜索框 -->
-          <view class="weui-search-bar__box">
-              <icon class="weui-icon-search_in-box" type="search" size="14"></icon>
-              <input type="text" class="weui-search-bar__input" placeholder="请输入搜索内容"/>
-          </view>
+        <!-- 搜索框 -->
+        <view class="weui-search-bar__box">
+          <icon class="weui-icon-search_in-box" type="search" size="14"></icon>
+          <input type="text" class="weui-search-bar__input" placeholder="请输入搜索内容" />
+        </view>
       </view>
       <!-- 搜索按钮,调用搜索查询方法 -->
       <view class="weui-search-bar__cancel-btn" bindtap='方法名a'>搜索</view>
@@ -15,118 +15,32 @@
   <view class="list-wrap">
     <scroll-view scroll-y="true" class="list">
       <view class="list-scroll-view">
-        <view class="course-card">
+        <view class="course-card" wx:for="{{courses}}" wx:for-item="course" wx:key="index">
           <view>
-            <image src="../../img/cover.png" mode="widthFix"></image>
+            <image src="{{course.img}}" mode="widthFix"></image>
           </view>
-          <view>人人都会小程序实战</view>
-          <view class="price">免费</view>
-        </view>
-        <view class="course-card">
-          <view>
-            <image src="../../img/cover.png" mode="widthFix"></image>
-          </view>
-          <view>人人都会小程序实战</view>
-          <view class="price">免费</view>
-        </view>
-
-        <view class="course-card">
-          <view>
-            <image src="../../img/cover.png" mode="widthFix"></image>
-          </view>
-          <view>人人都会小程序实战</view>
-          <view class="price">免费</view>
-        </view>
-
-        <view class="course-card">
-          <view>
-            <image src="../../img/cover.png" mode="widthFix"></image>
-          </view>
-          <view>人人都会小程序实战</view>
-          <view class="price">免费</view>
-        </view>
-
-        <view class="course-card">
-          <view>
-            <image src="../../img/cover.png" mode="widthFix"></image>
-          </view>
-          <view>人人都会小程序实战</view>
-          <view class="price">免费</view>
-        </view>
-
-        <view class="course-card">
-          <view>
-            <image src="../../img/cover.png" mode="widthFix"></image>
-          </view>
-          <view>人人都会小程序实战</view>
-          <view class="price">免费</view>
-        </view>
-
-        <view class="course-card">
-          <view>
-            <image src="../../img/cover.png" mode="widthFix"></image>
-          </view>
-          <view>人人都会小程序实战</view>
-          <view class="price">免费</view>
-        </view>
-
-        <view class="course-card">
-          <view>
-            <image src="../../img/cover.png" mode="widthFix"></image>
-          </view>
-          <view>人人都会小程序实战</view>
-          <view class="price">免费</view>
-        </view>
-
-        <view class="course-card">
-          <view>
-            <image src="../../img/cover.png" mode="widthFix"></image>
-          </view>
-          <view>人人都会小程序实战</view>
-          <view class="price">免费</view>
-        </view>
-
-        <view class="course-card">
-          <view>
-            <image src="../../img/cover.png" mode="widthFix"></image>
-          </view>
-          <view>人人都会小程序实战</view>
-          <view class="price">免费</view>
-        </view>
-
-        <view class="course-card">
-          <view>
-            <image src="../../img/cover.png" mode="widthFix"></image>
-          </view>
-          <view>人人都会小程序实战</view>
-          <view class="price">免费</view>
-        </view>
-
-        <view class="course-card">
-          <view>
-            <image src="../../img/cover.png" mode="widthFix"></image>
-          </view>
-          <view>人人都会小程序实战</view>
-          <view class="price">免费</view>
+          <view>{{course.name}}</view>
+          <view class="price" wx:if="{{course.price>0}}">{{course.price}}元</view>
+          <view wx:else class="price">免费</view>
         </view>
       </view>
     </scroll-view>
   </view>
   <view class="bottom">
     <view class="bottom_card" bindtap="change_img" data-num="1">
-      <image   src="{{img_one}}" mode="widthFix"></image>
+      <image src="{{img_one}}" mode="widthFix"></image>
       <view class="text">首页</view>
     </view>
-    <view  class="bottom_card"bindtap="change_img"  data-num="2">
-      <image   src="{{img_two}}" mode="widthFix"></image>
+    <view class="bottom_card" bindtap="change_img" data-num="2">
+      <image src="{{img_two}}" mode="widthFix"></image>
       <view class="text">分类</view>
     </view>
-    <view class="bottom_card" bindtap="change_img"  data-num="3" >
-      <image  src="{{img_three}}" mode="widthFix"></image>
+    <view class="bottom_card" bindtap="change_img" data-num="3">
+      <image src="{{img_three}}" mode="widthFix"></image>
       <view class="text">课程表</view>
     </view>
-    <view class="bottom_card"bindtap="change_img"  data-num="4">
-      <image  src="{{img_four}}" mode="widthFix"></image>
+    <view class="bottom_card" bindtap="change_img" data-num="4">
+      <image src="{{img_four}}" mode="widthFix"></image>
       <view class="text">我的</view>
     </view>
   </view>
