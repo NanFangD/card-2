@@ -35,5 +35,12 @@ App({
   },
   globalData: {
     userInfo: null
-  }
+  },
+  onError (msg) {
+    wx.showToast({ // 显示Toast
+      title: '小程序出错',
+      icon: 'error',
+      duration: 1500
+   })
+  },
 })
